@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+REPO_URL="https://github.com/isms/circlemud-world-parser/archive/refs/heads/master.tar.gz"
+DEST_NAME="circlemud-world-parser"
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
+DEST="$PROJECT_DIR/$DEST_NAME"
+
+mkdir -p "$DEST"
+
+curl -L "$REPO_URL" | tar xz --strip-components=1 -C "$DEST"
+
+echo "Downloaded to $DEST without .git"

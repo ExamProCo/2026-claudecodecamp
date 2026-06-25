@@ -1,0 +1,6 @@
+# Windows Zone.Identifier files (WSL download metadata)
+*:Zone.Identifier
+
+# Environment / secrets
+.env
+.env.local

@@ -1,0 +1,10 @@
+services:
+  circlemud:
+    build:
+      context: .
+    container_name: circlemud
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./lib:/opt/circlemud/lib

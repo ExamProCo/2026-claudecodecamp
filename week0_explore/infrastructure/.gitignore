@@ -1,0 +1,3 @@
+# CircleMUD data, seeded from lib.dist inside the image on first run.
+# Reproducible — editable on the host via the bind mount, not committed.
+/lib/
